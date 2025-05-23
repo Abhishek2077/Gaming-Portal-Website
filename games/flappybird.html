@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=650, initial-scale=1" />
+  <title>Flappy Bird Game</title>
+  <link rel="stylesheet" href="../css/flappybird.css">
+</head>
+<body>
+  <div class="flappybird-root">
+    <!-- Welcome Page -->
+    <div id="welcome-page">
+      <h1>Flappy Bird</h1>
+      <label for="player-id">Enter your name / ID:</label>
+      <input id="player-id" type="text" placeholder="Your name or ID" maxlength="20" />
+      <button id="start-btn" disabled>Start Game</button>
+      <div id="name-error"></div>
+    </div>
+    <!-- Main Layout -->
+    <div id="main-layout">
+      <div id="center-box">
+        <!-- Game Area (left) -->
+        <div class="game-area">
+          <canvas id="game-canvas" width="650" height="600"></canvas>
+          <div id="countdown-overlay"></div>
+          <div id="game-over-overlay">
+            <div id="game-over-msg"></div>
+            <div id="game-over-buttons">
+              <button id="restart-btn">Resume Game</button>
+              <button id="return-btn">Return to Welcome</button>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar (right) -->
+        <div id="sidebar">
+          <div id="score-display">Score: 0</div>
+          <div id="lives-display">
+            Lives:
+            <span class="heart"></span>
+            <span class="heart"></span>
+            <span class="heart"></span>
+            <!-- Add/remove hearts as needed -->
+          </div>
+          <div id="leaderboard">
+            <h3>Leaderboard</h3>
+            <ol id="leaderboard-list"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sounds (hidden) -->
+    <audio id="jump-sound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae7e6.mp3"></audio>
+    <audio id="hit-sound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae7e6.mp3"></audio>
+    <audio id="gameover-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9e7e2e.mp3"></audio>
+  </div>
+</body>
+</html>

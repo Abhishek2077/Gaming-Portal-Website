@@ -1,0 +1,14 @@
+<main class="game-container" role="main" aria-label="Memory Match Game">
+  <h1>Memory Match Game</h1>
+  <div class="grid" id="grid" tabindex="0" aria-live="polite" aria-atomic="true"></div>
+  <div class="info">
+    <button id="restart" aria-label="Restart Game">Restart Game</button>
+    <div class="stats" aria-live="polite" aria-atomic="true">
+      <div>Moves: <span id="moveCount">0</span></div>
+      <div>Time: <span id="timer">0</span> seconds</div>
+    </div>
+    <div id="winMessage" role="alert"></div>
+  </div>
+</main>
+
+<link rel="stylesheet" href="./css/memory.css">

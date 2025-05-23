@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Full-Fledged Snake Game</title>
+<link rel="stylesheet" href="../css/snake.css">
+</head>
+<body>
+<h1>Snake Game</h1>
+<main class="game-container" role="main" aria-label="Snake Game">
+  <div id="game-container">
+    <canvas id="gameCanvas" width="400" height="400" aria-label="Snake Game Canvas" role="img"></canvas>
+  </div>
+  <div id="controls">
+    <label for="snakeSkinSelector">Snake Skin:
+      <select id="snakeSkinSelector" aria-label="Select snake skin color">
+        <option value="green">Classic Green</option>
+        <option value="blue">Ocean Blue</option>
+        <option value="red">Fire Red</option>
+        <option value="yellow">Sunny Yellow</option>
+        <option value="purple">Royal Purple</option>
+        <option value="gradient">Gradient</option>
+        <option value="pattern">Pattern</option>
+      </select>
+    </label>
+    <label for="foodSkinSelector">Food Skin:
+      <select id="foodSkinSelector" aria-label="Select food skin color">
+        <option value="red">Classic Red</option>
+        <option value="lime">Lime Green</option>
+        <option value="orange">Orange</option>
+        <option value="pink">Pink</option>
+        <option value="cyan">Cyan</option>
+        <option value="gradient">Gradient</option>
+        <option value="pattern">Pattern</option>
+      </select>
+    </label>
+    <button id="pauseResumeBtn" aria-pressed="false" aria-label="Pause game">Start</button>
+  </div>
+  <div id="status-bar" aria-live="polite" aria-atomic="true">
+    Score: 0 | Speed Level: 1 | Obstacles: 0
+  </div>
+</main>
+
+</body>
+</html>
+

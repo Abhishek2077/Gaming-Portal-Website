@@ -1,0 +1,186 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .hangman-root .container {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            
+        }
+        .hangman-root .word {
+            font-size: 2em;
+            letter-spacing: 0.1em;
+        }
+        .hangman-root .hangman {
+            position: relative;
+            width: 120px;
+            height: 180px;
+            margin: 20px auto;
+        }
+        .hangman-root .part {
+            position: absolute;
+            background-color: white;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .hangman-root .part.visible {
+            opacity: 1;
+        }
+        .hangman-root .head {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            top: 0;
+            left: 40px;
+        }
+        .hangman-root .body {
+            width: 10px;
+            height: 50px;
+            top: 40px;
+            left: 55px;
+        }
+        .hangman-root .arm-left {
+            width: 40px;
+            height: 10px;
+            top: 60px;
+            left: 15px;
+            transform: rotate(30deg);
+            transform-origin: right center;
+        }
+        .hangman-root .arm-right {
+            width: 40px;
+            height: 10px;
+            top: 60px;
+            left: 65px;
+            transform: rotate(-30deg);
+            transform-origin: left center;
+        }
+        .hangman-root .leg-left {
+            width: 40px;
+            height: 10px;
+            top: 100px;
+            left: 15px;
+            transform: rotate(-30deg);
+            transform-origin: right center;
+        }
+        .hangman-root .leg-right {
+            width: 40px;
+            height: 10px;
+            top: 100px;
+            left: 65px;
+            transform: rotate(30deg);
+            transform-origin: left center;
+        }
+        .hangman-root .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .hangman-root .button {
+            background: #3498db;
+            border: none;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hangman-root .button:disabled {
+            background: #95a5a6;
+        }
+        .hangman-root .message {
+            margin: 20px 0;
+            font-size: 1.5em;
+        }
+        .hangman-root .happy {
+            animation: jump 0.5s infinite alternate;
+        }
+        .hangman-root .dead {
+            background-color: red !important;
+            animation: shake 0.3s infinite alternate;
+        }
+        @keyframes jump {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        @keyframes shake {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+        .hangman-root .leaderboard {
+            background: #273746;
+            border-radius: 8px;
+            margin: 20px auto 0 auto;
+            padding: 15px;
+            max-width: 350px;
+            color: #f7f7f7;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+        .hangman-root.leaderboard h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+        .hangman-root .leaderboard ol {
+            padding-left: 20px;
+            margin: 0;
+            text-align: left;
+        }
+        .hangman-root .leaderboard li {
+            margin-bottom: 4px;
+            font-size: 1em;
+        }
+        .hangman-root .leaderboard .you {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+        .hangman-root .name-input {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hangman-root .name-input input {
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: 1px solid #34495e;
+            margin-right: 8px;
+            font-size: 1em;
+            background: #4d657c;
+            color: #fff;
+            outline: none;
+            transition: border 0.2s;
+            width: 220px;
+            box-sizing: border-box;
+        }
+        .hangman-root .name-input input:focus {
+            border: 1.5px solid #3498db;
+            background: #2c3e50;
+        }
+        
+        .hangman-root .xp-container {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .hangman-root .hint-btn {
+            background: #27ae60;
+            margin-left: 10px;
+        }
+        .hangman-root .back-btn {
+            background: #e67e22;
+            margin-bottom: 10px;
+            float: left;
+        }
+        @media (max-width: 600px) {
+            .container { max-width: 98vw; }
+            .leaderboard { max-width: 98vw; }
+        }

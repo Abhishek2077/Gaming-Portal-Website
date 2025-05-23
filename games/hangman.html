@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Animated Hangman with Leaderboard</title>
+    
+<body>
+    <div class="hangman-root">
+        <div class="container">
+            <button class="button back-btn" id="backButton" style="display:none;">⬅ Back</button>
+            <h1>Hangman Game</h1>
+            <div class="name-input" id="nameInputContainer">
+                <input type="text" id="playerName" placeholder="Enter your name" maxlength="15" />
+                <button class="button" id="startGameBtn">Start Game</button>
+            </div>
+            <div id="gameArea" style="display:none;">
+                <div class="xp-container">
+                    XP: <span id="xpDisplay">0</span>
+                    <button class="button hint-btn" id="hintButton" disabled>Use 1 XP for Hint</button>
+                </div>
+                <div class="word" id="wordDisplay">_ _ _ _ _</div>
+                <div class="hangman" id="hangmanDisplay">
+                    <div class="part head" id="head"></div>
+                    <div class="part body" id="body"></div>
+                    <div class="part arm-left" id="armLeft"></div>
+                    <div class="part arm-right" id="armRight"></div>
+                    <div class="part leg-left" id="legLeft"></div>
+                    <div class="part leg-right" id="legRight"></div>
+                </div>
+                <div>Guessed Letters: <span id="guessedLetters"></span></div>
+                <div>Remaining Attempts: <span id="remainingAttempts">6</span></div>
+                <div class="buttons" id="buttonContainer"></div>
+                <div class="message" id="message"></div>
+                <button class="button" id="restartButton">Restart Game</button>
+            </div>
+            <div class="leaderboard" id="leaderboard">
+                <h2>🏆 Leaderboard</h2>
+                <ol id="leaderboardList"></ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

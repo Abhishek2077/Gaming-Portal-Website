@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rock Paper Scissors - Battle Mode</title>
+<link rel="stylesheet" href="../css/rps.css" />
+</head>
+<body>
+<header>Rock Paper Scissors - Battle Mode</header>
+<main class="game-container" role="main" aria-label="Rock Paper Scissors Battle Mode Game">
+
+  <section class="choices" aria-label="Make your choice">
+    <button class="choice-btn icon-rock" data-choice="rock" aria-label="Choose Rock" title="Rock"></button>
+    <button class="choice-btn icon-paper" data-choice="paper" aria-label="Choose Paper" title="Paper"></button>
+    <button class="choice-btn icon-scissors" data-choice="scissors" aria-label="Choose Scissors" title="Scissors"></button>
+  </section>
+
+  <div class="status" aria-live="polite" id="status-msg">Click a choice to start!</div>
+
+  <div class="choices-display" aria-label="Choices display">
+    <div class="player-display" id="player-display" aria-live="polite" aria-atomic="true">
+      <div class="display-title">You</div>
+      <div class="hand-display" id="player-hand">✊</div>
+      <div class="hp-bar-container" aria-label="Player HP">
+        <div class="hp-bar" id="player-hp-bar"></div>
+      </div>
+      <div class="hp-text" id="player-hp-text"></div>
+    </div>
+    <div class="player-display" id="computer-display" aria-live="polite" aria-atomic="true">
+      <div class="display-title">Computer</div>
+      <div class="hand-display" id="computer-hand">✊</div>
+      <div class="hp-bar-container" aria-label="Computer HP">
+        <div class="hp-bar" id="computer-hp-bar"></div>
+      </div>
+      <div class="hp-text" id="computer-hp-text"></div>
+    </div>
+  </div>
+
+  <div class="result-message" id="result-message" aria-live="assertive" aria-atomic="true"></div>
+
+  <section class="leaderboard-container" aria-label="Leaderboard - Top 5 Player Scores">
+    <div class="leaderboard-title">Leaderboard</div>
+    <ol class="leaderboard-list" id="leaderboard-list" aria-live="polite" aria-atomic="true">
+      <!-- Top scores will be inserted here -->
+    </ol>
+  </section>
+
+  <button id="reset-btn" aria-label="Reset game and scores" title="Reset Game">Reset Game</button>
+</main>
+
+<script src="../js/rps.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

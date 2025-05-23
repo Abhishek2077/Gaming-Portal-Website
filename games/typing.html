@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Typing Speed Test - Full Featured</title>
+
+</head>
+<body>
+    <div class="typing-root">
+        <div class="container" role="main" aria-label="Typing speed test application">
+            <h1>Typing Speed Test</h1>
+
+            <div class="stats" aria-live="polite">
+                <div class="stat" id="timer-display" aria-label="Elapsed time">Time: 0.0s</div>
+                <div class="stat" id="wpm-display" aria-label="Words per minute">WPM: 0</div>
+                <div class="stat" id="accuracy-display" aria-label="Typing accuracy percentage">Accuracy: 100%</div>
+            </div>
+
+            <div id="text-to-type" aria-label="Text to type" aria-live="polite" aria-atomic="true" tabindex="0">
+                <!-- The text with spans for highlighting -->
+            </div>
+            <div id="ghost-cursor" aria-hidden="true" style="display:none;"></div>
+
+            <textarea id="input-area" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" aria-label="Type here to test your speed" placeholder="Start typing here..." rows="3"></textarea>
+
+            <div class="buttons">
+                <button id="start-btn" type="button">Start Test</button>
+                <button id="reset-btn" type="button" disabled>Reset Test</button>
+                <button id="toggle-custom-text" type="button">Use Custom Text</button>
+                <button id="download-pdf-btn" type="button" disabled>Download PDF Report</button>
+            </div>
+
+            <section id="custom-text-section" aria-label="Custom text input area">
+                <label for="custom-text-input" style="display:block; font-weight: 600; margin-bottom: 6px; color:#ddd;">
+                Paste or type your custom text here:
+                </label>
+                <textarea id="custom-text-input" rows="5" aria-describedby="customTextHelp"></textarea>
+                <div id="customTextHelp" style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">After pasting text, press Start Test.</div>
+            </section>
+
+            <section id="graph-container" aria-label="WPM graph over time" style="display:none;">
+                <canvas id="wpm-graph" width="860" height="120" aria-hidden="true"></canvas>
+            </section>
+
+            <div class="footer">
+                &copy; 2024 Typing Speed Test App
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>
+
