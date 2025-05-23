@@ -27,11 +27,11 @@
   let score = 0;
   let pipes = [];
   let pipeWidth = 50;
-  let pipeGap = 150;
-  let pipeSpeed = 2;
+  let pipeGap = 160;
+  let pipeSpeed = 1;
   let bird;
-  let gravity = 0.25;
-  let liftForce = -6;
+  let gravity = 0.13;
+  let liftForce = -4.5;
   let countdown = 3;
   let countdownInterval = null;
   let animationId = null;
