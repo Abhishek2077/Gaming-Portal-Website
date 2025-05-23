@@ -28,9 +28,9 @@
   let pipes = [];
   let pipeWidth = 50;
   let pipeGap = 150;
-  let pipeSpeed = 4;
+  let pipeSpeed = 2;
   let bird;
-  let gravity = 0.35;
+  let gravity = 0.25;
   let liftForce = -6;
   let countdown = 3;
   let countdownInterval = null;
