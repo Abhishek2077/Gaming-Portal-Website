@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gaming Portal - Play Fun Games</title>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+
+<link rel="stylesheet" href="./css/memory.css">
+<link rel="stylesheet" href="./css/rps.css">
+<link rel="stylesheet" href="./css/snake.css">
+
+<link rel="stylesheet" href="./css/style.css" />
+
+
+
+</head>
+<body>
+<nav>
+        <div class="site-title" tabindex="0">🎮 Gaming Portal</div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-section" id="nav-links">
+            <a href="#about-section" class="nav-link">About</a>
+            <a href="#recently-played" class="nav-link">Recently Played</a>
+            <a href="#games-list" class="nav-link">Game List</a>
+            <a href="#footer" class="nav-link">Contact</a>
+            <button id="toggle-favorites-btn" aria-pressed="false" title="Show Favorites" aria-label="Toggle favorites view">
+                <span class="star-icon">⭐</span> Favorites
+            </button>
+        </div>
+    </nav>
+<main>
+    <div id="search-filters-container" aria-label="Search and filter games">
+        <div id="search-container">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search for a game..."
+                autocomplete="off"
+                aria-label="Search games"
+                spellcheck="false"
+            />
+            <div id="suggestions" hidden role="listbox"></div>
+        </div>
+        <div class="filter-group" aria-label="Filter games by category">
+            <label class="filter-label" for="category-filter">Category</label>
+            <select id="category-filter" class="filter-select" aria-controls="games-list" aria-label="Filter games by category">
+                <option value="all" selected>All Categories</option>
+            </select>
+        </div>
+        <div class="filter-group" aria-label="Sort games by popularity">
+            <label class="filter-label" for="popularity-filter">Sort by Popularity</label>
+            <select id="popularity-filter" class="filter-select" aria-controls="games-list" aria-label="Sort games by popularity">
+                <option value="none" selected>None</option>
+                <option value="asc">Lowest to Highest</option>
+                <option value="desc">Highest to Lowest</option>
+            </select>
+        </div>
+    </div>
+    
+     
+    <section id="recently-played" aria-label="Recently played games" hidden>
+        <h3>Recently Played</h3>
+        <div id="recently-played-list" tabindex="0" aria-live="polite" aria-relevant="additions"></div>
+    </section>
+    <section id="games-list" aria-label="List of available games" tabindex="0">
+        <!-- Game cards inserted by JS -->
+    </section>
+    <section id="game-container" hidden aria-live="polite" tabindex="0">
+        <!-- Selected game UI will appear here -->
+    </section>
+    
+</main>
+
+<section id="about-section">
+        <h2>About Gaming Portal</h2>
+        <p>
+            Welcome to Gaming Portal, your go-to destination for fun and engaging browser games!
+            Play a variety of casual and skill-based games with no downloads or ads.
+            Track your favorite games and revisit your recently played ones anytime.
+            Challenge yourself with puzzles, word games, and more for endless entertainment.
+            Enjoy a seamless gaming experience—just pure fun at your fingertips!
+
+        </p>
+        <ul>
+            <li>⭐ Add games to your favorites for quick access</li>
+            <li>🕹️ Play directly in your browser</li>
+            <li>🔍 Search and filter by category or popularity</li>
+            <li>🎯 Track your recently played games</li>
+            <li>📱 Fully responsive and mobile-friendly</li>
+        </ul>
+    </section>
+    <br>
+    <br>
+
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-logo">🎮 Gaming Portal</div>
+    <div class="footer-social">
+      <a href="https://github.com/Abhishek2077" target="_blank" title="GitHub" aria-label="GitHub">
+        🐙 GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/abhishektripathi-ai/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+        💼 LinkedIn
+      </a>
+      <a href="abhishek.tripathi5432@gmail.com" title="Gmail" aria-label="Gmail">
+        📧 Gmail
+      </a>
+    <a href="tel:7701859650" title="Contact" aria-label="Contact Page">
+      📞 <span>Phone Number</span>
+    </a>
+    </a>
+    </div>
+
+    <div class="footer-credit">
+      &copy; 2024 Gaming Portal. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
