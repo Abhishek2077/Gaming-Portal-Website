@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gaming Portal Website 🎮
 
 A modern, responsive web platform featuring multiple browser games—play, compete, and track your favorites all in one place!
@@ -62,3 +63,6 @@ README.md
 ---
 
 Enjoy playing and feel free to contribute or fork the project!
+=======
+
+>>>>>>> 69e2691244b0b6d27723fa5ae3ca32b3ba7e8e52
