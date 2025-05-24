@@ -28,7 +28,7 @@
   let pipes = [];
   let pipeWidth = 50;
   let pipeGap = 160;
-  let pipeSpeed = 1;
+  let pipeSpeed = 1.8;
   let bird;
   let gravity = 0.13;
   let liftForce = -4.5;
